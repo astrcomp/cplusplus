@@ -1,5 +1,5 @@
 ﻿HP A5500-24G EI (JD377A), Cisco WS-C2960X-24PD-L.
-test
+Dell Precision T5810, HP Workstation Z640.
 Epson EH-TW6000, Viewsonic Pro9000
 Hewlett-Packard Proliant DL360 Gen9, Dell PowerEdge R630
 Hewlett-Packard Proliant DL360 Gen9, Dell PowerEdge R630

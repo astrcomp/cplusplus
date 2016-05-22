@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < matrix; ++i)
             {
                 dataGridView1.Rows.Add();
-                dataGridView1.Rows[i].Cells[2].Value = "шт";
+                dataGridView1.Rows[i].Cells[2].Value = "шт.";
             }
 
           //dir 1
@@ -425,7 +425,7 @@ namespace WindowsFormsApplication1
             }
 
             strToFindObj = "kod";
-            replaceStrObj = dataGridView1.Rows[index].Cells[3].Value.ToString();
+            replaceStrObj = dataGridView1.Rows[index].Cells[6].Value.ToString();
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
             for (int i = 1; i <= document.Sections.Count; i++)
             {
@@ -447,7 +447,7 @@ namespace WindowsFormsApplication1
             }
 
             strToFindObj = "kol";
-            replaceStrObj = dataGridView1.Rows[index].Cells[1].Value.ToString();
+            replaceStrObj = dataGridView1.Rows[index].Cells[3].Value.ToString();
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
             for (int i = 1; i <= document.Sections.Count; i++)
             {
@@ -529,7 +529,13 @@ namespace WindowsFormsApplication1
             strvr = strvr.Replace("Заявка", "Приложение к Заявке");
             templatePathObj = CurrentDir + "Новая папка\\" + comboBox1.Text +  "\\" +strvr +".docx";
 
-
+            //if (!File.Exists(templatePathObj.ToString()))
+            //{
+            //    Word.Document doc1 = word.Documents.Add();
+            //    doc1.SaveAs(templatePathObj.ToString());
+            //    doc1.Close();
+            //}
+                
 
             Word.Document doc = word.Documents.Open(templatePathObj);
             if (doc.InlineShapes.Count > 0)
@@ -642,6 +648,24 @@ namespace WindowsFormsApplication1
             vremdoc1.Paragraphs.Add();
 
             vremdoc1.Paragraphs[2].Range.Paste();
+            vremdoc1.SaveAs(templatePathObj + "\\" + filename1);
+            vremdoc1.Close();
+
+
+
+
+
+            templatePathObj = CurrentDir + "Заявки\\" + comboBox1.Text + "\\Приложение\\" + "3";
+            filename1 = "Пояснение " + "3" + ".docx";
+            File.Delete(templatePathObj + "\\" + filename1);
+            vremdoc1 = word.Documents.Add();
+            vremdoc1.Content.SetRange(0, 0);
+            vremdoc1.Content.Text = 3.ToString() + ". " + str[3 - 1];
+            vremdoc1.Paragraphs.Add();
+            if (dataGridView1.Rows[comboBox1.SelectedIndex].Cells[3].Value != null)
+            {
+                vremdoc1.Paragraphs[2].Range.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[1].Value.ToString()+ " - "+dataGridView1.Rows[comboBox1.SelectedIndex].Cells[3].Value.ToString()+" шт.";
+            }
             vremdoc1.SaveAs(templatePathObj + "\\" + filename1);
             vremdoc1.Close();
 

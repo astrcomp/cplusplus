@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
 
+
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
@@ -25,18 +26,31 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           string[] text = File.ReadAllLines("dir.txt");
+
+
+
+           // dataGridView1.VirtualMode = true;
+            string[] text = File.ReadAllLines("dir.txt");
            comboBox1.Items.AddRange(text);
            comboBox1.SelectedIndex = 0;
             text = File.ReadAllLines("text.txt");
-/*0*/     dataGridView1.Columns.Add("Cat", "0. Каталог");
+/*0*/         dataGridView1.Columns.Add("Cat", "0. Каталог");
 /*1*/       dataGridView1.Columns.Add("Name", "1. Наименование");
 /*2*/       dataGridView1.Columns.Add("ves", "2. Ед.");
 /*3*/       dataGridView1.Columns.Add("Kol", "3. шт");
 /*4*/       dataGridView1.Columns.Add("Teh", "4. Тех. Описание");
 /*5*/       dataGridView1.Columns.Add("Product", "5. Производитель");
-/*6*/       dataGridView1.Columns.Add("Kod", "6. Коды");            
-/*7*/       dataGridView1.Columns.Add("TR", "7. ТР.ТС.");
+/*6*/       dataGridView1.Columns.Add("Kod", "6. Коды");
+
+
+
+
+         //   DataGridViewImageColumn iconColumn = new DataGridViewImageColumn();
+
+
+       //     dataGridView1.Columns.Add(iconColumn);
+            /*7*/
+            dataGridView1.Columns.Add("TR", "7. ТР.ТС.");
             dataGridView1.Columns.Add("Instr", "8. Инстр.");
             dataGridView1.Columns.Add("Zarub", "9. Заруб.");
             dataGridView1.Columns.Add("Vubor", "10. Обоснование");
@@ -80,6 +94,59 @@ namespace WindowsFormsApplication1
                 try
                 {
                     dataGridView1.Rows[i].Cells[11].Value = text[sum];
+                    sum++;
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+            }
+
+            text = File.ReadAllLines("odobren.txt");
+            matrix = text.Length;
+            sum = 0;
+            for (int i = 0; i < matrix; i++)
+            {
+                try
+                {
+                    dataGridView1.Rows[i].Cells[14].Value = text[sum];
+                    sum++;
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+            }
+
+
+
+            text = File.ReadAllLines("sranaliz.txt");
+            matrix = text.Length;
+            sum = 0;
+            for (int i = 0; i < matrix; i++)
+            {
+                try
+                {
+                    dataGridView1.Rows[i].Cells[13].Value = text[sum];
+                    sum++;
+                }
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+            }
+
+
+
+
+            text = File.ReadAllLines("svedenia.txt");
+            matrix = text.Length;
+            sum = 0;
+            for (int i = 0; i < matrix; i++)
+            {
+                try
+                {
+                    dataGridView1.Rows[i].Cells[12].Value = text[sum];
                     sum++;
                 }
                 catch (Exception e1)
@@ -189,27 +256,70 @@ namespace WindowsFormsApplication1
                     }
                 }
 
-            
-            
+
+
             text = File.ReadAllLines("kod.txt");
-            
+
             matrix = text.Length;
             sum = 0;
-            
-                for (int i = 0; i < matrix; i++)
+
+            for (int i = 0; i < matrix; i++)
+            {
+                try
                 {
-                    try
-                    {
-                        dataGridView1.Rows[i].Cells[6].Value = text[sum];
-                        sum++;
-                    }
-                    catch (Exception e1)
-                    {
-                        MessageBox.Show(e1.Message);
-                    }
+                    dataGridView1.Rows[i].Cells[6].Value = text[sum];
+                    sum++;
                 }
-            
-            
+                catch (Exception e1)
+                {
+                    MessageBox.Show(e1.Message);
+                }
+            }
+
+
+
+
+            /////////////////////////BITMAP???????????????????
+
+            //Word.Application word = new Word.Application();
+            //string strvr = comboBox1.Text;
+            //strvr = strvr.Replace("Заявка", "Приложение к Заявке");
+            //string CurrentDir = AppDomain.CurrentDomain.BaseDirectory;
+            //string templatePathObj = CurrentDir + "Новая папка\\" + comboBox1.Text + "\\" + strvr + ".docx";
+
+
+            //Bitmap img;
+            //Word.Document doc = word.Documents.Open(templatePathObj);
+            //if (doc.InlineShapes.Count > 0)
+            //{
+            //    Word.InlineShape pic = doc.InlineShapes[1];
+            //    pic.Height = 100;
+            //    pic.Width = 100;
+            //    pic.Select();
+            //    doc.ActiveWindow.Selection.CopyAsPicture();
+            //  //  iconColumn.Image = new Bitmap(Clipboard.GetImage());
+            //   dataGridView1.Rows[0].Cells[6].Value = new Bitmap(Clipboard.GetImage());
+            //    Clipboard.Clear();
+            //}
+
+            //doc.Close();
+            //word.Quit();
+
+
+
+
+
+
+            ////////////////////END BITMAP///////////////
+
+            //           MemoryStream ms = new MemoryStream((byte[])dataGridView1.Rows[0].Cells[6].Value);
+            //           pictureBox1.Image = Image.FromStream(ms);
+
+            // Image imge = Image.FromStream(new MemoryStream((byte[])dataGridView1.Rows[0].Cells[6].Value));
+            //  pictureBox1.Image = Image.FromStream(new MemoryStream((byte[])dataGridView1.Rows[0].Cells[6].Value));
+
+
+
             text = File.ReadAllLines("kol.txt");            
             matrix = text.Length;
             sum = 0;
@@ -302,7 +412,7 @@ namespace WindowsFormsApplication1
 
             int index = comboBox1.SelectedIndex;
             object strToFindObj = "name";
-            object replaceStrObj = dataGridView1.Rows[index].Cells[2].Value.ToString();
+            object replaceStrObj = dataGridView1.Rows[index].Cells[1].Value.ToString();
             object replaceTypeObj;
             Word.Range wordRange;            
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
@@ -365,16 +475,6 @@ namespace WindowsFormsApplication1
             }
 
             strToFindObj = "name";
-            replaceStrObj = dataGridView1.Rows[index].Cells[2].Value.ToString();
-            replaceTypeObj = Word.WdReplace.wdReplaceAll;
-            for (int i = 1; i <= document.Sections.Count; i++)
-            {
-                wordRange = document.Sections[i].Range;
-                Word.Find wordFindObj = wordRange.Find;
-                object[] wordFindParameters = new object[15] { strToFindObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, replaceStrObj, replaceTypeObj, missingObj, missingObj, missingObj, missingObj };
-                wordFindObj.GetType().InvokeMember("Execute", BindingFlags.InvokeMethod, null, wordFindObj, wordFindParameters);
-            }
-            strToFindObj = "kol";
             replaceStrObj = dataGridView1.Rows[index].Cells[1].Value.ToString();
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
             for (int i = 1; i <= document.Sections.Count; i++)
@@ -384,8 +484,18 @@ namespace WindowsFormsApplication1
                 object[] wordFindParameters = new object[15] { strToFindObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, replaceStrObj, replaceTypeObj, missingObj, missingObj, missingObj, missingObj };
                 wordFindObj.GetType().InvokeMember("Execute", BindingFlags.InvokeMethod, null, wordFindObj, wordFindParameters);
             }
+            strToFindObj = "kol";
+            replaceStrObj = dataGridView1.Rows[index].Cells[3].Value.ToString();
+            replaceTypeObj = Word.WdReplace.wdReplaceAll;
+            for (int i = 1; i <= document.Sections.Count; i++)
+            {
+                wordRange = document.Sections[i].Range;
+                Word.Find wordFindObj = wordRange.Find;
+                object[] wordFindParameters = new object[15] { strToFindObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, missingObj, replaceStrObj, replaceTypeObj, missingObj, missingObj, missingObj, missingObj };
+                wordFindObj.GetType().InvokeMember("Execute", BindingFlags.InvokeMethod, null, wordFindObj, wordFindParameters);
+            }
             strToFindObj = "prod";
-            replaceStrObj = dataGridView1.Rows[index].Cells[4].Value.ToString();
+            replaceStrObj = dataGridView1.Rows[index].Cells[5].Value.ToString();
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
             for (int i = 1; i <= document.Sections.Count; i++)
             {
@@ -396,7 +506,7 @@ namespace WindowsFormsApplication1
             }
 
             strToFindObj = "teh";
-            replaceStrObj = dataGridView1.Rows[index].Cells[5].Value.ToString();
+            replaceStrObj = dataGridView1.Rows[index].Cells[4].Value.ToString();
             replaceTypeObj = Word.WdReplace.wdReplaceAll;
             for (int i = 1; i <= document.Sections.Count; i++)
             {
@@ -420,6 +530,7 @@ namespace WindowsFormsApplication1
             templatePathObj = CurrentDir + "Новая папка\\" + comboBox1.Text +  "\\" +strvr +".docx";
 
 
+
             Word.Document doc = word.Documents.Open(templatePathObj);
             if (doc.InlineShapes.Count > 0)
             {
@@ -429,9 +540,58 @@ namespace WindowsFormsApplication1
                 pic.Select();
                 doc.ActiveWindow.Selection.CopyAsPicture();
                 wordRange.Paste();
-                Clipboard.Clear();
+           //     Clipboard.Clear();
             }
+
+            if (doc.Shapes.Count > 0)
+            {
+                Word.Shape pic = doc.Shapes[1];
+                pic.Height = 100;
+                pic.Width = 100;
+                pic.Select();
+                doc.ActiveWindow.Selection.CopyAsPicture();
+                wordRange.Paste();
+               // Clipboard.Clear();
+                document.Shapes[1].WrapFormat.Type =  Word.WdWrapType.wdWrapInline;
+                
+            }
+
+
+
             doc.Close();
+
+
+            wordRange = table.Rows[9].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[7].Value.ToString();
+
+            wordRange = table.Rows[10].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[8].Value.ToString();
+
+            wordRange = table.Rows[11].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[9].Value.ToString();
+
+            wordRange = table.Rows[12].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[10].Value.ToString();
+
+
+            wordRange = table.Rows[13].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[11].Value.ToString();
+
+            wordRange = table.Rows[14].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[12].Value.ToString();
+
+            wordRange = table.Rows[15].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[13].Value.ToString();
+
+            wordRange = table.Rows[16].Cells[3].Range;
+            wordRange.Text = dataGridView1.Rows[comboBox1.SelectedIndex].Cells[14].Value.ToString();
+
+            //Bitmap img = new Bitmap( dataGridView1.Rows[1].Cells[6].Value);
+
+
+            // Clipboard.SetImage(Image.FromStream(new MemoryStream((byte[])dataGridView1.Rows[0].Cells[6].Value)));
+            // Image img = Image.FromStream(new MemoryStream((byte[])dataGridView1.Rows[0].Cells[6].Value));
+            document.SaveAs(CurrentDir + "Заявки\\" + comboBox1.Text + "\\Таблица " + comboBox1.Text + ".docx"); ;
             document.Close();
             
             
@@ -472,6 +632,21 @@ namespace WindowsFormsApplication1
                 }
             }
 
+            ///////Втсавляем картинку
+            templatePathObj = CurrentDir + "Заявки\\" + comboBox1.Text + "\\Приложение\\" + "6";
+            string filename1 = "Пояснение " + "6" + ".docx";
+            File.Delete(templatePathObj + "\\" + filename1);
+            Word.Document vremdoc1 = word.Documents.Add();
+            vremdoc1.Content.SetRange(0, 0);
+            vremdoc1.Content.Text = 6.ToString() + ". " + str[6 - 1];
+            vremdoc1.Paragraphs.Add();
+
+            vremdoc1.Paragraphs[2].Range.Paste();
+            vremdoc1.SaveAs(templatePathObj + "\\" + filename1);
+            vremdoc1.Close();
+
+
+            Clipboard.Clear();
             word.Quit();
         }
 

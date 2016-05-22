@@ -1,0 +1,42 @@
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Office.Interop.Word.dll
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\office.dll
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Vbe.Interop.dll
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Office.Interop.Word.xml
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\office.xml
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+c:\users\олька\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Администратор\Desktop\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Office.Interop.Word.dll
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\office.dll
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Vbe.Interop.dll
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\stdole.dll
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Microsoft.Office.Interop.Word.xml
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\office.xml
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\!!!ПОСЛЕДНЕЕ\2016\2016-2017\2016.05.17\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache

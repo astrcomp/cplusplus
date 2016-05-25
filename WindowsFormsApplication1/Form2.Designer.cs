@@ -41,11 +41,12 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 24);
-            this.textBox1.MaximumSize = new System.Drawing.Size(0, 2);
+            this.textBox1.MaximumSize = new System.Drawing.Size(4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(0, 0);
